@@ -1,2 +1,2 @@
 # nigeria
-Working with Modi data from http://nmis.mdgs.gov.ng/, exploring development data for Nigeria
+Working with Nigerian Government data from http://nmis.mdgs.gov.ng/, exploring development data for Nigeria
