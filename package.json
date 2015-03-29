@@ -1,0 +1,19 @@
+{
+  "name": "nigeria",
+  "version": "1.0.0",
+  "description": "Working with Nigerian Government data from http://nmis.mdgs.gov.ng/, exploring development data for Nigeria.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\\"
+  },
+  "author": "nobody",
+  "license": "GPLv3",
+  "dependencies": {
+    "leaflet": "^0.7.3",
+    "leaflet.heat": "^0.1.3"
+  }
+}
