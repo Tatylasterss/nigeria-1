@@ -1,4 +1,4 @@
 build:
-	browserify index.js -o bundle.js
+	browserify base/index.js -o static/js/bundle.js
 watch:
-	watchify index.js -o bundle.js
+	watchify base/index.js -o static/js/bundle.js
