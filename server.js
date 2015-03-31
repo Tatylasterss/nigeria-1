@@ -6,10 +6,6 @@ var server = restify.createServer({
 	name: 'nigeria',
 });
 
-server.use(restify.acceptParser(server.acceptable));
-server.use(restify.queryParser());
-server.use(restify.bodyParser());
-
 server.get('lga/:lga', function (req, res, next) {
 	get_lga(req.params.lga, function(doc) {
 		res.send(doc);
@@ -17,12 +13,9 @@ server.get('lga/:lga', function (req, res, next) {
 	});
 });
 
-
 server.get('/.*/', restify.serveStatic({
 	directory: __dirname + '/static',
 	default:   'index.html',
 }));
-
-
 
 server.listen(8080);
