@@ -4,7 +4,10 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     	<style>
+            @import url(http://fonts.googleapis.com/css?family=Lato:100,400,700);
+
             body {
+                font-family: 'Lato', sans-serif;
                 margin: 0px 0px 0px 0px;
             }
     		#map {
@@ -26,21 +29,46 @@
                 overflow: hidden;
             }
             #left_closed ul li {
-                height: 50px;
+                min-height: 50px;
                 text-align: center;
                 vertical-align: middle;
                 font-size: 200%;
                 color: #e5e5e5;
+                -webkit-transition: 1s; /* Safari */
+                transition: 1s;
             }
             #left_open {
-                margin-left: 50px;
-                width: 2px;
+                margin-left: -148px;
+                width: 200px;
                 height: 100%;
                 position: fixed;
                 background-color: #2f2f2f;
                 border-style: solid;
                 border-width: 0px 10px 0px 0px;
                 border-color: #191919;
+                -webkit-transition: 1s; /* Safari */
+                transition: 1s;
+            }
+            #left_open ul {
+                padding: 0px 0px 0px 0px;
+                width: 100%;
+                overflow: hidden;
+            }
+            #left_open ul li {
+                min-height: 50px;
+                vertical-align: middle;
+                font-size: 100%;
+                color: #e5e5e5;
+            }
+            #left_open ul li p {
+                margin: 5px 10px 0px 10px;
+                vertical-align: bottom;
+                font-size: 150%;
+                font-weight: 100;
+                color: #e5e5e5;
+                border-style: solid;
+                border-width: 0px 0px 1px 0px;
+                border-color: #444444;
             }
     	</style>
     </head>
@@ -49,12 +77,34 @@
 
         <div id="left_closed">
             <ul>
-                <li id="menu_toggle"><i class="fa fa-bars"></i></li>
+                <li id="menu_toggle">
+                    <i class="fa fa-bars"></i>
+                </li>
+                <li id="menu_heatmap">
+                    <i class="fa fa-fire"></i>
+                </li>
+                <li id="menu_about">
+                    <i class="fa fa-info-circle"></i>
+                </li>
             </ul>
         </div>
         <div id="left_open">
-            <div id="open_guts" hidden>
-                lots of conversaiont
+            <div id="open_guts">
+                <ul>
+                    <li id="menu_toggle">
+                        <p><b>NG MDG Data</b></p>
+                    </li>
+                    <li id="menu_heatmap">
+                        <p>Heatmap<br>
+                            <small>Lorem</small><br>
+                            <small>Ipsum</small>
+                        </p>
+                        <br>
+                    </li>
+                    <li>
+                        <p>About Project</p>
+                    </li>
+                </ul>
             </div>
         </div>        
 

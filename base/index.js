@@ -24,15 +24,18 @@ osm.addTo(map);
 
 // listener to handle sidebar
 $('#menu_toggle').on('click', function() {
-	console.log('foo');
-	if ($('#open_guts').is(":visible")) {
-		console.log("word");
-		$('#open_guts').hide();
-		$('#left_open').width(2);
+	if ($('#left_open').css('margin-left') == '50px') {
+		window.setTimeout( function() {
+			$('#menu_toggle').css('color', '#e5e5e5');
+			$('#left_open').css('margin-left', '-148px');
+			$('#left_closed ul li').css('height', '50px');
+		}, 0);
 	}
 	else {
-		console.log("bud");
-		$('#open_guts').show();
-		$('#left_open').width(200);
+		window.setTimeout( function() {
+			$('#menu_toggle').css('color', '#898989');
+			$('#left_open').css('margin-left', '50px');
+			$('#left_closed #menu_heatmap').css('height', $('#open_guts #menu_heatmap').css('height'));
+		}, 0);
 	}
 })
