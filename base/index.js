@@ -10,3 +10,29 @@ osm.addTo(map);
 
 
 
+
+
+
+
+
+
+
+
+/////////
+// DOM //
+/////////
+
+// listener to handle sidebar
+$('#menu_toggle').on('click', function() {
+	console.log('foo');
+	if ($('#open_guts').is(":visible")) {
+		console.log("word");
+		$('#open_guts').hide();
+		$('#left_open').width(2);
+	}
+	else {
+		console.log("bud");
+		$('#open_guts').show();
+		$('#left_open').width(200);
+	}
+})
