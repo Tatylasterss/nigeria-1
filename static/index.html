@@ -23,12 +23,12 @@
                 background-color: #191919;
                 z-index: 100;
             }
-            #left_closed ul {
+            #left_closed>ul {
                 padding: 0px 0px 0px 0px;
                 width: 100%;
                 overflow: hidden;
             }
-            #left_closed ul li {
+            #left_closed>ul>li {
                 min-height: 50px;
                 text-align: center;
                 vertical-align: middle;
@@ -49,18 +49,18 @@
                 -webkit-transition: 1s; /* Safari */
                 transition: 1s;
             }
-            #left_open ul {
+            #left_open>ul {
                 padding: 0px 0px 0px 0px;
                 width: 100%;
                 overflow: hidden;
             }
-            #left_open ul li {
+            #left_open>ul>li {
                 min-height: 50px;
                 vertical-align: middle;
                 font-size: 100%;
                 color: #e5e5e5;
             }
-            #left_open ul li p {
+            #left_open>ul>li>p {
                 margin: 5px 10px 0px 10px;
                 vertical-align: bottom;
                 font-size: 150%;
@@ -70,6 +70,16 @@
                 border-width: 0px 0px 1px 0px;
                 border-color: #444444;
                 cursor: pointer;
+            }
+            .menu_li {
+                margin: 5px 35px 5px 35px;
+                font-weight: 100;
+            }
+            .menu_li>li {
+                min-height: 0px;
+                vertical-align: middle;
+                font-size: 100%;
+                color: #898989;
             }
     	</style>
     </head>
@@ -90,23 +100,28 @@
             </ul>
         </div>
         <div id="left_open">
-            <div id="open_guts">
-                <ul>
-                    <li id="menu_toggle">
-                        <p><b>NG MDG Data</b></p>
-                    </li>
-                    <li id="menu_heatmap">
-                        <p>Heatmap<br>
-                            <small onclick="electricity()">No electricity</small><br>
-                            <small>Ipsum</small>
-                        </p>
-                        <br>
-                    </li>
-                    <li>
-                        <p>About Project</p>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li id="menu_toggle">
+                    <p><b>NG MDG Data</b></p>
+                </li>
+                <li id="menu_heatmap">
+                    <p>Heatmap</p>
+                    <ul class="menu_li fa-ul">
+                        <li onclick="toggle_li(this)">
+                            <i class="fa-li fa fa-square-o"></i> Electricity
+                        </li>
+                        <li onclick="toggle_li(this)">
+                            <i class="fa-li fa fa-square-o"></i> Plumbing
+                        </li>
+                        <li onclick="toggle_li(this)">
+                            <i class="fa-li fa fa-square-o"></i> Water
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>About Project</p>
+                </li>
+            </ul>
         </div>        
 
         <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>

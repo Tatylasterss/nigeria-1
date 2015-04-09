@@ -21,10 +21,9 @@ osm.addTo(map);
 // DOM //
 /////////
 
-var electricity = function() {
+var toggle_li = function() {
 	console.log('foo');
 };
-electricity()
 
 // listener to handle sidebar
 $('#menu_toggle').on('click', function() {
