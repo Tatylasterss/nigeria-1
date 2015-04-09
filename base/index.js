@@ -17,10 +17,14 @@ osm.addTo(map);
 
 
 
-
 /////////
 // DOM //
 /////////
+
+var electricity = function() {
+	console.log('foo');
+};
+electricity()
 
 // listener to handle sidebar
 $('#menu_toggle').on('click', function() {
@@ -38,4 +42,4 @@ $('#menu_toggle').on('click', function() {
 			$('#left_closed #menu_heatmap').css('height', $('#open_guts #menu_heatmap').css('height'));
 		}, 0);
 	}
-})
+});

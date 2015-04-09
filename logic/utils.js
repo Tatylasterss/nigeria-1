@@ -11,4 +11,14 @@ var get_lga = function(unique_lga, cb) {
 	});
 };
 
+var electricity = function(bool, cb) {
+	var promise = education.find({'phcn_electricity':bool});
+	promise.on('error', function(err) {
+		throw err;
+	});
+	promise.on('success', function(doc) {
+		cb(doc);
+	});
+};
+
 module.exports = get_lga;
